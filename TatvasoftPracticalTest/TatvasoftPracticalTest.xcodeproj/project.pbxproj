@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E14588C9A36D8EAD259DD21A /* Pods_TatvasoftPracticalTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270BFDC6EF4E9FEA74E76BB4 /* Pods_TatvasoftPracticalTest.framework */; };
 		FC344BD4281508F400244A3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BD3281508F400244A3B /* AppDelegate.swift */; };
 		FC344BD6281508F400244A3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BD5281508F400244A3B /* SceneDelegate.swift */; };
 		FC344BD8281508F400244A3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BD7281508F400244A3B /* ViewController.swift */; };
@@ -16,9 +17,16 @@
 		FC344BEE28150DDD00244A3B /* userCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BED28150DDD00244A3B /* userCell.swift */; };
 		FC344BF028150ED300244A3B /* userItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BEF28150ED300244A3B /* userItemCell.swift */; };
 		FC344BF3281510EA00244A3B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BF2281510EA00244A3B /* UIViewExtension.swift */; };
+		FC344BF5281519CF00244A3B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BF4281519CF00244A3B /* User.swift */; };
+		FC344BF728151A1500244A3B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BF628151A1500244A3B /* UserData.swift */; };
+		FC344BFB28151B6400244A3B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BFA28151B6400244A3B /* ApiManager.swift */; };
+		FC344BFD2815205C00244A3B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC344BFC2815205C00244A3B /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FFA20A71710EF08B3D3F3A5 /* Pods-TatvasoftPracticalTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TatvasoftPracticalTest.debug.xcconfig"; path = "Target Support Files/Pods-TatvasoftPracticalTest/Pods-TatvasoftPracticalTest.debug.xcconfig"; sourceTree = "<group>"; };
+		1E24702F4FE44315544F55BA /* Pods-TatvasoftPracticalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TatvasoftPracticalTest.release.xcconfig"; path = "Target Support Files/Pods-TatvasoftPracticalTest/Pods-TatvasoftPracticalTest.release.xcconfig"; sourceTree = "<group>"; };
+		270BFDC6EF4E9FEA74E76BB4 /* Pods_TatvasoftPracticalTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TatvasoftPracticalTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC344BD0281508F400244A3B /* TatvasoftPracticalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TatvasoftPracticalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC344BD3281508F400244A3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC344BD5281508F400244A3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +38,10 @@
 		FC344BED28150DDD00244A3B /* userCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userCell.swift; sourceTree = "<group>"; };
 		FC344BEF28150ED300244A3B /* userItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userItemCell.swift; sourceTree = "<group>"; };
 		FC344BF2281510EA00244A3B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FC344BF4281519CF00244A3B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC344BF628151A1500244A3B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FC344BFA28151B6400244A3B /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		FC344BFC2815205C00244A3B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14588C9A36D8EAD259DD21A /* Pods_TatvasoftPracticalTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002008833C42B10AF69CE16B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FFA20A71710EF08B3D3F3A5 /* Pods-TatvasoftPracticalTest.debug.xcconfig */,
+				1E24702F4FE44315544F55BA /* Pods-TatvasoftPracticalTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		11BA41E194ED8AF163004ED5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				270BFDC6EF4E9FEA74E76BB4 /* Pods_TatvasoftPracticalTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC344BC7281508F400244A3B = {
 			isa = PBXGroup;
 			children = (
 				FC344BD2281508F400244A3B /* TatvasoftPracticalTest */,
 				FC344BD1281508F400244A3B /* Products */,
+				002008833C42B10AF69CE16B /* Pods */,
+				11BA41E194ED8AF163004ED5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,7 +94,7 @@
 		FC344BD2281508F400244A3B /* TatvasoftPracticalTest */ = {
 			isa = PBXGroup;
 			children = (
-				FC344BF1281510BB00244A3B /* Extensions */,
+				FC344BF1281510BB00244A3B /* Others */,
 				FC344BEA28150BB200244A3B /* View */,
 				FC344BE928150BAB00244A3B /* Controller */,
 				FC344BE828150BA400244A3B /* ViewModel */,
@@ -79,6 +111,8 @@
 		FC344BE728150B9D00244A3B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC344BF4281519CF00244A3B /* User.swift */,
+				FC344BF628151A1500244A3B /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,7 +150,25 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		FC344BF1281510BB00244A3B /* Extensions */ = {
+		FC344BF1281510BB00244A3B /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				FC344BF928151B4800244A3B /* Extensions */,
+				FC344BF828151B3C00244A3B /* APIManager */,
+				FC344BFC2815205C00244A3B /* Utility.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		FC344BF828151B3C00244A3B /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				FC344BFA28151B6400244A3B /* ApiManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		FC344BF928151B4800244A3B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				FC344BF2281510EA00244A3B /* UIViewExtension.swift */,
@@ -131,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC344BE4281508F600244A3B /* Build configuration list for PBXNativeTarget "TatvasoftPracticalTest" */;
 			buildPhases = (
+				270BD28583BC84B59CC92D70 /* [CP] Check Pods Manifest.lock */,
 				FC344BCC281508F400244A3B /* Sources */,
 				FC344BCD281508F400244A3B /* Frameworks */,
 				FC344BCE281508F400244A3B /* Resources */,
+				090A239A05219162E35AFFA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,17 +244,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		090A239A05219162E35AFFA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TatvasoftPracticalTest/Pods-TatvasoftPracticalTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TatvasoftPracticalTest/Pods-TatvasoftPracticalTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TatvasoftPracticalTest/Pods-TatvasoftPracticalTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		270BD28583BC84B59CC92D70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TatvasoftPracticalTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC344BCC281508F400244A3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC344BF3281510EA00244A3B /* UIViewExtension.swift in Sources */,
+				FC344BFB28151B6400244A3B /* ApiManager.swift in Sources */,
 				FC344BEE28150DDD00244A3B /* userCell.swift in Sources */,
+				FC344BF728151A1500244A3B /* UserData.swift in Sources */,
 				FC344BD8281508F400244A3B /* ViewController.swift in Sources */,
 				FC344BD4281508F400244A3B /* AppDelegate.swift in Sources */,
 				FC344BF028150ED300244A3B /* userItemCell.swift in Sources */,
 				FC344BD6281508F400244A3B /* SceneDelegate.swift in Sources */,
+				FC344BFD2815205C00244A3B /* Utility.swift in Sources */,
+				FC344BF5281519CF00244A3B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +442,7 @@
 		};
 		FC344BE5281508F600244A3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FFA20A71710EF08B3D3F3A5 /* Pods-TatvasoftPracticalTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,6 +471,7 @@
 		};
 		FC344BE6281508F600244A3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E24702F4FE44315544F55BA /* Pods-TatvasoftPracticalTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
