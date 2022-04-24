@@ -17,6 +17,7 @@ class userCell: UITableViewCell {
     
     var arrUserItem = [String]()
     
+    /// Set user data 
     var userDetail: Users? {
         didSet {
             userNameLabel.text = userDetail?.name
@@ -25,23 +26,10 @@ class userCell: UITableViewCell {
                 userImageView.kf.setImage(with: urlPath, placeholder: UIImage(systemName: "person.fill"), options: nil) { (result,err) in
                 }
             }
-            
             arrUserItem = userDetail?.items ?? []
             userItemCollectionView.reloadData()
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
 }
 
 // MARK: Collectionview - UICollectionViewDelegate, UICollectionViewDataSource methods
@@ -59,6 +47,7 @@ extension userCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
 }
 
+// MARK: Collectionview - UICollectionViewDelegateFlowLayout method
 extension userCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -66,8 +55,5 @@ extension userCell: UICollectionViewDelegateFlowLayout {
             return CGSize(width: screenWidth/2 - 30, height: screenWidth/2 - 30)
         }
         return CGSize(width: userItemCollectionView.bounds.self.width, height: userItemCollectionView.bounds.self.width)
-        
     }
-    
-    
 }

@@ -6,6 +6,11 @@
 //
 
 import Foundation
+
+//MARK: - User Model
+/// name: User Name
+/// image: User Image URL
+/// items: Returns the user items
 struct Users : Codable {
     let name : String?
     let image : String?

@@ -11,8 +11,11 @@ import Alamofire
 class ApiManager: NSObject {
     
     static let shared: ApiManager = ApiManager()
+    
+    /// Base URl for api call
     let baseUrl = "http://sd2-hiring.herokuapp.com/api/"
     
+    /// fetch User Details
     func fetchUserdata(userURL: String, completion: @escaping (_ userResult: UserData) -> Void) {
         let request = AF.request(baseUrl + userURL)
         request.responseData { response in

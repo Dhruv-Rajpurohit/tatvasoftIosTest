@@ -12,6 +12,7 @@ class userItemCell: UICollectionViewCell {
     // MARK: - Outlet and Properties
     @IBOutlet weak var userItemImageView: UIImageView!
     
+    /// Set user item data
     var userItem: String? {
         didSet {
             if let userImage = userItem {
