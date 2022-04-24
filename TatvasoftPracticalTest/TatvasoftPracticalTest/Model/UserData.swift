@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Base Model
 struct Base : Codable {
     let status : Bool?
     let message : String?
@@ -28,6 +29,9 @@ struct Base : Codable {
 
 }
 
+// MARK: - User Data
+/// users: total user's list
+/// hasmore: If morer user data then it's value will be true else false
 struct UserData : Codable {
     let users : [Users]?
     let has_more : Bool?

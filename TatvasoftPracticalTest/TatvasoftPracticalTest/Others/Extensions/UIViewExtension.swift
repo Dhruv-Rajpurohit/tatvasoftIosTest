@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: -
+/// Set cornerRadius for any view
 extension UIView {
     
     @IBInspectable
@@ -19,6 +21,4 @@ extension UIView {
             layer.masksToBounds = newValue > 0
         }
     }
-    
-    
 }
