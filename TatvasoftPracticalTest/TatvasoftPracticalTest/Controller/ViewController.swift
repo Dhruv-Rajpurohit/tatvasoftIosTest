@@ -11,13 +11,16 @@ class ViewController: UIViewController {
     
     // MARK: - Outlet and Properties
     @IBOutlet weak var userTableView: UITableView!
-    
+    var arrUserData = [Users]()
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        ApiManager.shared.fetchUserdata(userURL: "users?offset=\(arrUserData.count)&limit=10") { userResult in
+            self.arrUserData.append(contentsOf: userResult.users ?? [])
+            self.userTableView.reloadData()
+        }
     }
-
 
 }
 
@@ -25,15 +28,16 @@ class ViewController: UIViewController {
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return arrUserData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? userCell else { return UITableViewCell() }
+        cell.userDetail = arrUserData[indexPath.row]
         return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 400
     }
 }
